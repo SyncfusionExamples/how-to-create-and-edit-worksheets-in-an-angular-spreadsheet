@@ -1,0 +1,21 @@
+<div class="wrapper">
+  <button class="e-btn" style="margin: 5px;" (click)="btnClick()">Discard</button>
+  <ejs-spreadsheet #spreadsheet (created)="onCreate()" (cellEdit)="onEdit($event)">
+    <e-sheets>
+      <e-sheet name="Order Details">
+        <e-ranges>
+            <e-range [dataSource]="data"></e-range>
+        </e-ranges>
+        <e-columns>
+            <e-column [width]=100></e-column>
+            <e-column [width]=130></e-column>
+            <e-column [width]=100></e-column>
+            <e-column [width]=120></e-column>
+            <e-column [width]=110></e-column>
+            <e-column [width]=120></e-column>
+        </e-columns>
+      </e-sheet>
+      <e-sheet state="VeryHidden"></e-sheet>
+    </e-sheets>
+  </ejs-spreadsheet>
+</div>
